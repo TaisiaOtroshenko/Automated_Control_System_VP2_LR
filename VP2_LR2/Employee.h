@@ -11,5 +11,4 @@ public:
 	Employee operator=(Employee a);
 	friend bool operator> (const Employee& a, const Employee& b);
 	friend bool operator== (const Employee& a, const Employee& b);
-
 };

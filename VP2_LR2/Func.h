@@ -1,20 +1,18 @@
 #pragma once
 #include <iostream>
-#include <vector>
 using namespace std;
 
 template<typename Type>
-
-void Sort(Type* arr);
-
-template<typename Type, typename T>
-Type* Filter(Type* arr, T par);
+void Sort(vector <Type> arr);
 
 template<typename Type>
-void Del(Type* arr, size_t index);
+void Filter(vector <Type> arr);
 
 template<typename Type>
-void Add(Type* arr);
+void Del(vector <Type> arr);
 
 template<typename Type>
-void Edit(Type* arr, size_t index);
+void Add(vector <Type> arr);
+
+template<typename Type>
+void Edit(vector <Type> arr);

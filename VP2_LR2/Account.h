@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Constants.h"
 using namespace std;
 
 class Account
@@ -7,12 +8,15 @@ class Account
 	size_t m_id_owner{};
 	size_t m_id{};
 	string m_name{};
-	char* m_date;	
 	unsigned long m_balance{};
 public:
 	Account();
-	void Trans(Account scd, int summ_tr);
+	Account(size_t id_owner);
 
+	size_t GetId();
+	size_t GetIdOwner();
+
+	void In();
 	void Print() const;
 	friend ostream& operator<<(ostream& out, const Account& acc);
 

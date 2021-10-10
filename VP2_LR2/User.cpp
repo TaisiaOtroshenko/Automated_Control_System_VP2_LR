@@ -1,40 +1,57 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "User.h"
-using namespace std;
-
-//перегрузить операторы сравнения на int и char и присвоения 
 
 User::User()
 {
-	m_id = ID_user++;
-	time_t now = time(0);
-	m_date = ctime(&now);
+	m_id = id_us++;
+}
+
+string User::GetLogin()
+{
+	return m_login;
+}
+
+string User::GetPass()
+{
+	return m_pass;
+}
+
+bool User::GetLvl()
+{
+	return m_lvl;
+}
+
+size_t User::GetId()
+{
+	return m_id;
 }
 
 void User::In()
 {
+	cout << "\tВвод данных пользователя" << endl;
+	cout << "Введите логин:	";
 	cin >> m_login;
+	cout << "Введите пароль: ";
 	cin >> m_pass;
 }
 
-
-
-
-#pragma region  вывод
-string User::OutLvl()
-{
-	return (m_lvl) ? ("Сотрудник") : ("Клиент");
-}
 void User::PrintParent() const
 {
-	//OutLvl();
-	cout << "ID пользователя - " << m_id << endl;
-	cout << "Имя пользователя - " << m_name << endl;
+	cout << "\tТекущие данные пользователя" << endl;
+
+	cout << "Роль пользователя - " ;
+	(m_lvl) ? (cout << "Сотрудник" << endl) : (cout << "Клиент" << endl);
+
+	cout << "ID - " << m_id << endl;
+	cout << "Логин - " << m_login << endl;
 }
 ostream& operator<<(ostream& out, const User& man)
 {
 	man.PrintParent();
 	return out;
 }
-#pragma endregion
 
+bool operator>(const User& a, const User& b)
+{
+	return (a.m_id > b.m_id) ? (true) : (false);
+}

@@ -1,9 +1,9 @@
 #pragma once
 #include "User.h"
+
 class Client : public User
 {
 private:
-
 public:
 	Client();
 	void In();

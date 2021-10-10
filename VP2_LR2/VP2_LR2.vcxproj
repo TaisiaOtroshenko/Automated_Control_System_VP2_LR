@@ -19,22 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="ItemMenuAbstract.h" />
     <ClInclude Include="Account.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="CMenu.h" />
     <ClInclude Include="Employee.h" />
-    <ClInclude Include="Func.h" />
     <ClInclude Include="ItemMenu.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Constants.cpp" />
     <ClCompile Include="ItemMenuAbstract.cpp" />
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="CMenu.cpp" />
     <ClCompile Include="Employee.cpp" />
-    <ClCompile Include="Func.cpp" />
     <ClCompile Include="ItemMenu.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="User.cpp" />
